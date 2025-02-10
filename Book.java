@@ -11,6 +11,7 @@ class Book
     // The fields.
     private String author;
     private String title;
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -20,7 +21,13 @@ class Book
     {
         author = bookAuthor;
         title = bookTitle;
+        borrowed = 0;
     }
 
-    // Add the methods here ...
+    // Addthe methods here ...
+    public int borrowed()
+    {
+        this.borrowed = borrowed++;
+        return borrowed;
+    }
 }
